@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            /*background-color: rgb(83, 183, 198);*/
+            font-family: cursive;
+        }
+      body{
+            background-image:url("back1.svg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            position: relative;
+            background-position: relative;
+           
+            
+
+       }
+
+      
+
+        input:enabled{
+                     background-color: rgb(183, 126, 126);
+                     border: 5px ;
+                     margin:3px;
+                     
+        }
+
+        input[disabled]{
+         background-color: rgb(183, 126, 126);
+        border: 5px 
+           
+
+        }
+
+           
+        p{
+                display:none;
+        }
+
+            input:hover+p{
+        
+            display: inline;
+            background-color: rgb(141, 89, 22);
+            border-radius:20px ;
+        }
+        input:focus{
+            font-size: large;
+            background-color:white ;
+            color: rgb(160, 93, 113);
+        }
+
+        img{
+            display:none ;
+        }
+
+        input[type="email"]:focus:valid ~ img.valid{
+            display: inline;
+            width: 20px;
+            height: 20px;
+        }
+
+        input[type="email"]:focus:invalid ~img.invalid{
+            display: inline;
+            width: 20px;
+            height: 20px;
+        } 
+      
+        input[type="radio"]:checked{
+            scale: 1.5;
+            
+
+        }
+        input[type="radio"]:checked + label{
+            color:  whitesmoke;
+            
+        }
+        input[type="radio"]:hover{
+            scale: 1.4;
+ 
+        } 
+         input[type=radio]
+       {
+        accent-color: rgb(113, 56, 82);
+       }
+
+      
+        
+        input{
+            border-radius: 20px ;
+            padding-top:5px ;
+            padding-bottom:5px ;
+        }
+
+        b{
+            display: none;
+        }
+
+        input[type="number"]:focus:valid~b.vali{
+            display: inline;
+
+
+        }
+
+        input[type="number"]:focus:invalid~b.invali{
+            display: inline;
+
+
+        }body{
+           margin: 3px;
+           padding-left: 600px;
+           padding-top: 100px;
+          
+           
+        }
+      
+      
+      
+        
+    </style>
+</head>
+<body>
+    <h2> Sign up form</h2>
+   
+ <form id="form">
+    <table>
+        <tr>
+            <td>
+                <label>Name:</label>
+            </td>
+            <td>
+                <input id="fname" type="text" name="name" placeholder="ex-praveen" required>
+                <p>enter your name</p>
+                <div class="err"></div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>colleg:</label>
+            </td>
+            <td> 
+                <input type="text" name="name" placeholder="college" disabled >
+              
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>P email:</label>
+            </td>
+            <td>
+                <input id="" type="email" name="name" placeholder="ex-ab@gmail.com" required >
+    <p> enter your mail</p>
+    <img class="valid" src="rightsymbol.png">
+    <img class="invalid" src="warnig.png">
+   
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>S email:</label>
+
+            </td>
+            <td>
+                <input id="email" type="email" name="name" placeholder="ex-ab@gmail.com" >
+                <div class="err"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><label>Password:</label></label>
+
+            </td>
+            <td>
+                <input type="password" name="name" placeholder="min 5 character" >
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label> Gender:</label>
+
+            </td>
+            <td>
+                <input type="radio" id="ab" name="g">
+                <label>male</label><input type="radio" name="g">
+                <label>female</label><input type="radio" name="g">
+                <label>custom</label><br>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>age:</label>
+
+            </td>
+            <td>
+                <input id="num" type="number" min="18" required>
+                <p > enter</p>
+                <div class="err"></div>
+                <!-- <b class="vali">&#128104;</b>
+                <b class="invali">&#128118;</b> -->
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>mod:</label>
+
+            </td>
+            <td>
+                <input type="number" readonly placeholder="online">
+
+            </td>
+        </tr>
+        <tr>
+            <td> <input id="btn" type="submit"></td>
+        </tr>
+
+             
+</table>
+</form>
+ 
+
+    
+
+   
+<script src="./2form.js"></script>
+</body>
+</html>
